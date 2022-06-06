@@ -1,0 +1,138 @@
+.table {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.table-statistics table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.table-statistics th {
+    font-size: 16px;
+    color: #ebe7fe;
+    padding: 13px 0;
+    font-weight: bold;
+    background-color: #094c12;
+    border-left: 1px solid #c0c1c217;
+    border-top: 1px solid #c0c1c217;
+}
+
+.table-statistics th:nth-child(n + 2) th {
+    border-left: none;
+    border-top: none;
+}
+
+tbody td:nth-child(n + 3) {
+    text-align: right;
+}
+tbody td:last-child {
+    text-align: center;
+}
+
+tbody td:first-child {
+    padding-left: 30px;
+}
+
+.table-statistics tr:first-child th:first-child {
+    text-align: left;
+    padding-left: 30px;
+
+}
+
+.table-statistics tr:first-child th:nth-child(2) {
+    text-align: left;
+    padding-left: 30px;
+}
+
+.table-statistics td {
+    font-size: 16px;
+    color: #2a3644;
+    background-color: #f2f2f2;
+    padding: 10px 25px;
+    vertical-align: middle;
+}
+
+.table-statistics td:nth-child(n + 2) {
+    border-left: 1px solid #c0c1c2;
+}
+
+tbody tr:nth-child(n + 2) {
+    border-top: 1px solid #c0c1c2;
+}
+
+.table-statistics tr:hover td {
+    background-color: #c0c1c2;
+    cursor: pointer;
+}
+
+tbody tr:nth-child(even) td {
+    background-color: #e8e8e8;
+}
+
+.plus {
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.btn {
+    padding: 10px 50px;
+    font-size: 16px;
+    border: 2px solid #094c12;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: #fff;
+    font-weight: bold;
+    color: #2a3644;
+}
+
+.btn:hover {
+    background-color: #094c12;
+    color: #ebe7fe;
+}
+
+.form-row {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.form-row input {
+    display: block;
+    width: 100%;
+    padding: 0 10px;
+    line-height: 40px;
+    background: none;
+    border-width: 0;
+    border-bottom: 2px solid #094c12;
+}
+
+.form-row label {
+    position: absolute;
+    left: 13px;
+    color: #9d959d;
+    font-size: 16px;
+    transform: translateY(-30px);
+    transition: all 0.2s ease;
+}
+
+.form-row input:focus {
+    outline: 0;
+    border-color: #094c12;
+}
+
+.form-row input:focus+label, .form-row input:valid+label {
+    transform: translateY(-60px);
+    margin-left: -14px;
+    font-size: 14px;
+    font-weight: 400;
+    outline: 0;
+    border-color: #094c12;
+    color: #2a3644;
+}
+
+
+
+/* foreach ($students as $value) {
+    echo "$value[0]"; */
