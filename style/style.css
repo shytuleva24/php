@@ -1,5 +1,9 @@
+body {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
 .table {
-    width: 960px;
+    width: 70%;
     margin: 0 auto;
 }
 
@@ -21,6 +25,11 @@
 .table-statistics th:nth-child(n + 2) th {
     border-left: none;
     border-top: none;
+}
+
+.table td:last-child {
+    padding: 0;
+    width: 5%;
 }
 
 tbody td:nth-child(n + 3) {
@@ -70,14 +79,7 @@ tbody tr:nth-child(even) td {
     background-color: #e8e8e8;
 }
 
-.plus {
-    margin: 50px auto;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: flex-start;
-}
-
-.btn {
+.form input.btn {
     padding: 10px 50px;
     font-size: 16px;
     border: 2px solid #094c12;
@@ -88,51 +90,48 @@ tbody tr:nth-child(even) td {
     color: #2a3644;
 }
 
-.btn:hover {
+.form input.btn:hover {
     background-color: #094c12;
     color: #ebe7fe;
 }
 
-.form-row {
-    position: relative;
-    margin-bottom: 40px;
+.select option:first-child {
+    display: none;
 }
 
-.form-row input {
-    display: block;
-    width: 100%;
-    padding: 0 10px;
-    line-height: 40px;
-    background: none;
-    border-width: 0;
-    border-bottom: 2px solid #094c12;
+.form {
+    text-align: center;
 }
 
-.form-row label {
-    position: absolute;
-    left: 13px;
-    color: #9d959d;
-    font-size: 16px;
-    transform: translateY(-30px);
-    transition: all 0.2s ease;
+.form input, .form select {
+    width: 180px;
+    margin-bottom: 10px;
+    padding: 12px 17px;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    margin: 20px;
 }
 
-.form-row input:focus {
-    outline: 0;
-    border-color: #094c12;
+input:focus-visible,
+textarea:focus-visible {
+    filter: drop-shadow(0 0 2.5px rgba(62,106,255,0.55));
+    background-color: #ffffff;
+    border: 1px solid #094c12;
 }
 
-.form-row input:focus+label, .form-row input:valid+label {
-    transform: translateY(-60px);
-    margin-left: -14px;
-    font-size: 14px;
-    font-weight: 400;
-    outline: 0;
-    border-color: #094c12;
-    color: #2a3644;
+a:active, a:focus { 
+    outline: none; 
 }
 
+input, textarea {
+    outline:none;
+}
 
+input:active, textarea:active {
+    outline:none;
+}
 
-/* foreach ($students as $value) {
-    echo "$value[0]"; */
+:focus {
+    outline:none;
+}
