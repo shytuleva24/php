@@ -22,7 +22,7 @@
                 ["Людмила",	"БО-11"],
                 ["Валентина", "11-ЕУ"],
             ];
-
+            
             if ($_POST) {
                 array_push($students, [$_POST['name'], $_POST['group']]);
             }
@@ -34,60 +34,36 @@
             $schedule2 = [];
             $schedule3 = [];
             for ($i = 0, $k = $schedule1Start, $m = $schedule2Start; $i < $countDays; $i++, $k++, $m--) {
-                $schedule3Start = rand (9,18);
-                $isNotOk = true;
-                if ($schedule3Start != $k && $schedule3Start != $m) {
-                    $isNotOk = false;
-                    for ($j = 0; $j < count($schedule3); $j++) {
-                        if ($schedule3[$j] == $schedule3Start) {
-                            $isNotOk = true;
-                            break;
-                        }
-                    }
-                }
-                while ($schedule3Start == $k || $schedule3Start == $m || $isNotOk) {`
-                    if (count($schedule3) == 0) {
-                        $isNotOk = false;
-                    
-                    }
-                    for ($j = 0; $j < count($schedule3); $j++) {
-                        if ($schedule3[$j] == $schedule3Start) {
-                            $isNotOk = true;
-                            break;
-                        }
-                        if (($j + 1) == count($schedule3)) {
-                            $isNotOk = false;
-                        }
-                    }
-                    if (($schedule3Start == $k || $schedule3Start == $m || $isNotOk)) {
-                        $schedule3Start = rand (9,18);
-                    }
-                }
                 $time1 = "";
                 $time2 = "";
-                $time3 = "";
-            
+
                 if ($k < 10) {
                     $time1 .= 0;
                 }
                 if ($m < 10) {
                     $time2 .= 0;
                 }
-                if ($schedule3Start < 10) {
-                    $time3 .= 0;
-                }
+
                 $time1 .= $k . ":00";
                 $time2 .= $m . ":00";
-                $time3 .= $schedule3Start . ":00";
-            
+
                 $schedule1[] .= $time1;
                 $schedule2[] .= $time2;
-                $schedule3[] .= $time3;
+            }
+
             
-                // array_push($schedule1, $time1);
-                // array_push($schedule2, $time2);
-                // array_push($schedule2, $time2);
-            }         
+            while(count($schedule3) < 5){
+                $t = rand(9, 18);
+                if ($t < 10) {
+                    $t = 0 . $t;
+                }
+                if(!in_array($t, $schedule3) && explode(":",$schedule1[count($schedule3)])[0] != $t && explode(":",$schedule2[count($schedule3)])[0] != $t){
+                    $time3 = $t . ":00";
+                    $schedule3[] .= $time3;
+                }
+            }
+
+
         ?>
         <div class="table table-statistics">
             <table>
