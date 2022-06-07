@@ -8,7 +8,7 @@
     <title>Графік чергування студентів 1-го курсу</title>
 </head>
 <body>
-    <form action="index.php" method="POST">
+    <form action="test.php" method="POST">
         <?php
             $students = [
                 ["Петро", "11-ЕУ"],
@@ -52,14 +52,14 @@
             }
 
             
-            while(count($schedule3) < 5){
-                $t = rand(9, 18);
+            while (count($schedule3) < $countDays) {
+                $t = rand($schedule1Start, $schedule2Start);
                 if ($t < 10) {
                     $t = 0 . $t;
                 }
-                if(!in_array($t, $schedule3) && explode(":",$schedule1[count($schedule3)])[0] != $t && explode(":",$schedule2[count($schedule3)])[0] != $t){
-                    $time3 = $t . ":00";
-                    $schedule3[] .= $time3;
+                $t = $t . ":00";
+                if (!in_array($t, $schedule3) && $schedule1[count($schedule3)] != $t && $schedule2[count($schedule3)] != $t) {
+                    $schedule3[] .= $t;
                 }
             }
 

@@ -34,7 +34,7 @@
             $schedule2 = [];
             $schedule3 = [];
             for ($i = 0, $k = $schedule1Start, $m = $schedule2Start; $i < $countDays; $i++, $k++, $m--) {
-                $schedule3Start = rand (9,18);
+                $schedule3Start = rand ( $schedule1Start,$schedule2Start);
                 $isNotOk = true;
                 if ($schedule3Start != $k && $schedule3Start != $m) {
                     $isNotOk = false;
@@ -60,7 +60,7 @@
                         }
                     }
                     if (($schedule3Start == $k || $schedule3Start == $m || $isNotOk)) {
-                        $schedule3Start = rand (9,18);
+                        $schedule3Start = rand ($schedule1Start,$schedule2Start);
                     }
                 }
                 $time1 = "";
