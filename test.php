@@ -27,7 +27,7 @@
                 array_push($students, [$_POST['name'], $_POST['group']]);
             }
 
-            $countDays = 5;
+            $countDays = 6;
             $schedule1Start = 9;
             $schedule2Start = 18;
             $schedule1 = [];
@@ -63,7 +63,6 @@
                 }
             }
 
-
         ?>
         <div class="table table-statistics">
             <table>
@@ -71,7 +70,7 @@
                     <tr>
                         <th rowspan="2">Ім'я</th>
                         <th rowspan="2">№ Группи</th>
-                        <th colspan="5">Графік чергування</th>
+                        <th colspan="6">Графік чергування</th>
                         <th rowspan="2">Видалити</th>
 
                     </tr>
@@ -81,6 +80,8 @@
                         <th>Середа</th>
                         <th>Четверг</th>
                         <th>П'ятниця</th>
+                        <th>Субота</th>
+
                     </tr>
                 </thead>
                 <tbody>
