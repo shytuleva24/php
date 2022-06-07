@@ -45,7 +45,7 @@
                         }
                     }
                 }
-                while ($schedule3Start == $k || $schedule3Start == $m || $isNotOk) {`
+                while ($schedule3Start == $k || $schedule3Start == $m || $isNotOk) {
                     if (count($schedule3) == 0) {
                         $isNotOk = false;
                     
@@ -86,7 +86,7 @@
             
                 // array_push($schedule1, $time1);
                 // array_push($schedule2, $time2);
-                // array_push($schedule2, $time2);
+                // array_push($schedule3, $time3);
             }         
         ?>
         <div class="table table-statistics">
